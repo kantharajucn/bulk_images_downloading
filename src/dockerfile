@@ -1,0 +1,5 @@
+FROM python:3
+
+WORKDIR /home/kantharaju/docker/docker_learning/blue_yonder_coding
+
+
