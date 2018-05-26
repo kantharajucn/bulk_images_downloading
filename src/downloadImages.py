@@ -17,6 +17,7 @@ class DownloadImage:
             os.mkdir("../output")
 
         with open(self.url_file) as f:
+            print("Started downloading the images")
             for line in f:
                 image = line.rpartition('/')[2]
                 image = image.strip()
@@ -35,5 +36,4 @@ if __name__ == '__main__':
     parser.add_argument('--file', required=True, help='../file.txt')
     parser.print_help()
     args = parser.parse_args()
-    print(args.file)
     main(args.file)
