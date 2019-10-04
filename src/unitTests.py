@@ -28,6 +28,12 @@ class TestDownloadImage(unittest.TestCase):
         num_images = len([name for name in os.listdir(self.output)])
         self.assertTrue(num_urls == num_images)
 
+    def test_verify_output_1(self):
+        with open(self.url_file) as f:
+            num_urls = sum(1 for _ in f)
+        num_images = len([name for name in os.listdir(self.output)])
+        self.assertTrue(num_urls == num_images)
+
 
 if __name__ == '__main__':
     unittest.main()
